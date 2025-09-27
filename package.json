@@ -1,6 +1,11 @@
 {
   "name": "customer-support-zone",
   "version": "0.1.0",
+  // ------------------------------------------------------------------
+  // 1. ADD: 'homepage' for GitHub Pages to fix the blank page issue.
+  // This must match your GitHub Pages URL: username.github.io/repository-name
+  "homepage": "https://fahmidaca.github.io/CS-Ticket-System",
+  // ------------------------------------------------------------------
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -17,7 +22,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    // ------------------------------------------------------------------
+    // 2. ADD: Scripts for the 'gh-pages' deployment process.
+    // NOTE: You must install the gh-pages package first: npm install gh-pages --save-dev
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    // ------------------------------------------------------------------
   },
   "eslintConfig": {
     "extends": [
@@ -29,7 +40,7 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op 0.1.0"
+      "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",
